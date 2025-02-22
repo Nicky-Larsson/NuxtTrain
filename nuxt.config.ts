@@ -8,12 +8,18 @@ export default defineNuxtConfig({
       pathPrefix: false
     }
   ]
-  /*
+ , 
   hooks:{
     'pages:extend'(pages){
       function setMiddleware(pages:any){
+        for (const page of pages) {
+          if(page.path==='/notes') {
+            page.meta||={}
+            page.meta.middleware=['named']
+          }
+        }
       }
+      setMiddleware(pages)
     }
   }
-  */
 })

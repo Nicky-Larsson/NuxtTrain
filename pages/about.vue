@@ -7,7 +7,8 @@
 
 <script setup>
 definePageMeta({
-    layout: false
+    layout: false,
+    middleware:[function (to,from){console.log('In page middleware!')}]
 })
 
 function enableLayout(params) {
