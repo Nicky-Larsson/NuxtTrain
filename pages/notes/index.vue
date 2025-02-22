@@ -1,20 +1,31 @@
 <template>
     <div>
         <h1>Notes simple</h1>
+        <!--
+        <NewNote/>
         <br>
-        <button @click="boolean=!boolean"> Add New {{ boolean }} </button>
+        <NoteCard/>
         <br>
+        -->
 
-        <component :is="boolean ? newNote : noteCard" />
+        <button @click="showModal=!showModal">Add New {{ showModal }}</button>
+        <br>
+        <div id = "flex">
+            <component :is="showModal ? newNote : noteCard"/>
+            <component :is="showModal ? newNote : noteCard"/>
+            <component :is="showModal ? newNote : noteCard"/>
+        </div>
+        
+        
         <br>
         <br>
     </div>
 </template>
 
 <script setup>
-const newNote=resolveComponent('NewNote')
-const noteCard=resolveComponent('NoteCard')
-const boolean=ref(false)
+    const showModal = ref(true)
+    const newNote   = resolveComponent('NewNote')
+    const noteCard  = resolveComponent('NoteCard')
 </script>
 
 
