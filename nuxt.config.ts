@@ -21,5 +21,12 @@ export default defineNuxtConfig({
       }
       setMiddleware(pages)
     }
+  },
+
+  imports:{
+    dirs:[
+      'composables',
+      'composables/**',
+    ]
   }
 })
