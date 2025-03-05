@@ -6,18 +6,24 @@
   </div>
 </template>
 
-<script setup>
 
+<script setup  lang='ts'>
     const emit = defineEmits(['update']);
-    const props = defineProps({
+
+    interface Props {
+        message: string;
+    }
+
+    const props = defineProps<Props>();
+    
+    /* const props = defineProps({
         message: {
             type: String,
             required: 'this is a default value !'
         }
-    });
-
+    }); */
+    
     const sendUpdate = () => {
-        emit('update', 'Hello from Child Component !');
+        emit('update', 'value from Child');
     };
-
 </script>

@@ -31,5 +31,13 @@ export default defineNuxtConfig({
   },
 
   plugins: [
-    '~/plugins/foo/my-plugin',]
+    '~/plugins/foo/my-plugin',],
+  
+  modules: ['@pinia/nuxt'],
+
+  features: { devLogs: false },
+
+  pinia: {
+    storesDirs: ['./stores/**'],
+  },
 })

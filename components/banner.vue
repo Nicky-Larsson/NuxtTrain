@@ -19,6 +19,8 @@
         <h1>Count : {{ count }}</h1>
 
         <button @click="isWelcomeVisible = !isWelcomeVisible">Toggle Welcome</button>
+        <button @click="isRed = !isRed">change Color</button>
+
         {{isWelcomeVisible}}
 
         <h1 v-if="isWelcomeVisible" :class="isRed ? 'isRed' : 'isGreen'" v-debug>
@@ -46,7 +48,7 @@
 
         <ul>
         <li v-for="(item,idx) in items" :key="item" @click="showAlert(item)">
-                {{ item }} -- index:{{ idx }}
+                {{ item }} -- index:{{ idx }} 
             </li>
         </ul>
 
