@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   plugins: [
     '~/plugins/foo/my-plugin',],
   
-  modules: ['@pinia/nuxt'],
+  modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt'],
 
   features: { devLogs: false },
 

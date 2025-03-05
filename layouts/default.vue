@@ -16,7 +16,8 @@
 <script setup>
 
 const randomNumber=()=>{
-    return Math.floor(Math.random() * 100) + 1
+    // return Math.floor(Math.random() * 100) + 1
+    return useState(() => Math.floor(Math.random() * 100) + 1).value
 }
 
 </script>

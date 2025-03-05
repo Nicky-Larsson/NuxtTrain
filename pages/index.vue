@@ -1,5 +1,13 @@
 <template>
    <div>
+      <h4>Pinia Increment</h4>
+      <div class="box">
+         <h3>{{ counterStore.count }}</h3>
+         <h3>{{ counterStore.doubleCount }}</h3>
+         <button @click="counterStore.increment">Increment</button>
+      </div>
+      
+
       <ChildComponent message="Hello from Parent Component !"/>
       <br>
       <banner/>
@@ -61,6 +69,8 @@
 </template>
 
 <script setup>
+
+   const counterStore = useCounterStore();
 
    const dynamicValue = ref('Hello from Parent Component !');
    const show = ref(true);
